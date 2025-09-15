@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var bullet: PackedScene
+@export var boss_projectile: PackedScene
 var start
 var end
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +13,6 @@ func _ready() -> void:
 
 
 func _on_timer_timeout() -> void:
-	var bullet = bullet.instantiate()
+	var bullet = boss_projectile.instantiate()
 	bullet.position = Vector2(randf_range(start, end), - 30 )
 	add_child(bullet)
