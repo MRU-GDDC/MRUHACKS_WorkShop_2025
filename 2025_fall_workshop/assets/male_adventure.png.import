@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk8jq2g5f5u3s"
-path="res://.godot/imported/f_walk_Up.png-a72cfeb8211c58eb330b165bf5ebe967.ctex"
+uid="uid://daiykjq382efy"
+path="res://.godot/imported/male_adventure.png-d49f0ea0f44ade62257bf623f563ab88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/f_walk_Up.png"
-dest_files=["res://.godot/imported/f_walk_Up.png-a72cfeb8211c58eb330b165bf5ebe967.ctex"]
+source_file="res://assets/male_adventure.png"
+dest_files=["res://.godot/imported/male_adventure.png-d49f0ea0f44ade62257bf623f563ab88.ctex"]
 
 [params]
 

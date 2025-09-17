@@ -26,7 +26,3 @@ func _on_try_again_pressed() -> void:
 	get_tree().reload_current_scene()
 	
 	pass # Replace with function body.
-
-
-func _on_button_pressed() -> void:
-	pass # Replace with function body.

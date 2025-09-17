@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://3h2argymey3" path="res://premade assets/scripts/ConclusionUi.gd" id="1_ri2aw"]
 
 [node name="SendScreen" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,4 +77,4 @@ layout_mode = 2
 text = "Play Again"
 
 [connection signal="pressed" from="Winning/VBoxContainer/Try again" to="." method="_on_try_again_pressed"]
-[connection signal="pressed" from="Lost/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Lost/VBoxContainer/Button" to="." method="_on_try_again_pressed"]
