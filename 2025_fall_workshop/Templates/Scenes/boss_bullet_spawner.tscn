@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b11e58oay3fbc"]
 
 [ext_resource type="Script" uid="uid://cahub8vkh3s4o" path="res://Templates/scripts/boss_bullet_spawner.gd" id="1_ugx4c"]
-[ext_resource type="PackedScene" uid="uid://iacx0o04fr3e" path="res://Templates/Scenes/Boss_bullet.tscn" id="2_4hwg3"]
+[ext_resource type="PackedScene" uid="uid://iacx0o04fr3e" path="res://Templates/Scenes/BossProjectile.tscn" id="2_4hwg3"]
 
 [node name="boss_projectile_spawner" type="Node2D"]
 script = ExtResource("1_ugx4c")
