@@ -15,10 +15,6 @@ run/main_scene="uid://xgemv584exsj"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Templates/icon.svg"
 
-[autoload]
-
-GameManager="*res://todelete/game_manager.gd"
-
 [display]
 
 window/size/viewport_width=320
