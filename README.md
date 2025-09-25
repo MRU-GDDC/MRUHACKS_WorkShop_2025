@@ -106,9 +106,9 @@ func _ready() -> void:
 	$health.max_value = GameManager.health
 	
 func _process(delta: float) -> void:
-	
-	update_health()
-	update_score(delta)
+	if !GameManager.game_end:
+		update_health()
+		update_score(delta)
 
 func update_health():
 	$health.value = GameManager.health
@@ -118,7 +118,6 @@ func update_score(delta: float):
 	GameManager.score = GameManager.score - delta
 	$score.text = str(GameManager.score)
 	pass
-
 
 ```
 
