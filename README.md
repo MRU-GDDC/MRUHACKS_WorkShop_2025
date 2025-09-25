@@ -6,6 +6,7 @@ extends Node
 signal GameWon
 signal GameOver
 
+var game_end :bool
 var health:int 
 var score:int
 
@@ -14,6 +15,8 @@ func _ready() -> void:
 func set_data():
 	health = 20
 	score = 20000
+	game_end = false
+
 
 ```
 
