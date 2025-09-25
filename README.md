@@ -50,6 +50,7 @@ func take_damage(damage:int):
 	
 	if(GameManager.health <= 0):
 		GameManager.GameOver.emit()
+		GameManager.game_end = true;
 		get_tree().paused = true
 	pass
 
