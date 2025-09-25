@@ -119,8 +119,9 @@ func update_health():
 	
 func update_score(delta: float):
 	GameManager.score = GameManager.score - delta
-	$score.text = str(GameManager.score)
+	$score.text = str("Score: ",GameManager.score)
 	pass
+
 
 ```
 
