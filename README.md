@@ -84,7 +84,8 @@ extends CharacterBody2D
 var can_attack: bool = true
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("default")
+	if $AnimatedSprite2D != null:
+		$AnimatedSprite2D.play("default")
 	pass
 	
 func _process(delta: float) -> void:
@@ -112,16 +113,17 @@ func take_damage(damage:int):
 func shoot_bullet():
 	if Input.is_action_just_pressed("Fire_Bullet") && can_attack:
 		var bullets = bullet.instantiate()
-		bullets.position = Vector2($"Fire Point".global_position.x,$"Fire Point".global_position.y )
+		bullets.position = Vector2($"FirePoint".global_position.x,$"FirePoint".global_position.y )
 		get_tree().root.add_child(bullets);
 		can_attack = false
-		$"Attack cooldown".start()
+		$"AttackTimer".start()
 	pass
 
 
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
 	pass # Replace with function body.
+
 
 
 ```
