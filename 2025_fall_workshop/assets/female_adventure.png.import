@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk8jq2g5f5u3s"
-path="res://.godot/imported/female_adventure.png-01b004682d5bb3c1373cbe6f195cb026.ctex"
+path="res://.godot/imported/female_adventure.png-5e6714b22717cf86b4fda3c91bfcaf87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/female_adventure.png"
-dest_files=["res://.godot/imported/female_adventure.png-01b004682d5bb3c1373cbe6f195cb026.ctex"]
+source_file="res://Assets/female_adventure.png"
+dest_files=["res://.godot/imported/female_adventure.png-5e6714b22717cf86b4fda3c91bfcaf87.ctex"]
 
 [params]
 
