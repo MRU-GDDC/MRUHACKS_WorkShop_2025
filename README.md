@@ -16,6 +16,61 @@ func set_data():
 	score = 20000
 
 ```
+
+### Player Script
+``` python
+extends CharacterBody2D
+
+
+@export var bullet:PackedScene
+@export var SPEED = 300.0
+var can_attack: bool = true
+
+func _ready() -> void:
+	if $AnimatedSprite2D != null:
+		$AnimatedSprite2D.play("default")
+	pass
+	
+func _process(delta: float) -> void:
+	shoot_bullet()
+	pass
+
+func _physics_process(delta: float) -> void:
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED 
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	position.x = clamp(position.x,20, 300)
+
+	move_and_slide()
+
+func take_damage(damage:int):
+	GameManager.health = GameManager.health - damage
+	
+	if(GameManager.health <= 0):
+		GameManager.GameOver.emit()
+		get_tree().paused = true
+	pass
+
+func shoot_bullet():
+	if Input.is_action_just_pressed("FireProjectile") && can_attack:
+		var bullets = bullet.instantiate()
+		bullets.position = Vector2($"FirePoint".global_position.x,$"FirePoint".global_position.y )
+		get_tree().root.add_child(bullets);
+		can_attack = false
+		$"AttackTimer".start()
+	pass
+
+
+func _on_attack_cooldown_timeout() -> void:
+	can_attack = true
+	pass # Replace with function body.
+
+
+
+```
+
 ### player ui
 ``` python
 extends Node
@@ -74,59 +129,7 @@ func _on_try_again_pressed() -> void:
 	pass # Replace with function body.
 
 ```
-### Player Script
-``` python
-extends CharacterBody2D
 
-
-@export var bullet:PackedScene
-@export var SPEED = 300.0
-var can_attack: bool = true
-
-func _ready() -> void:
-	if $AnimatedSprite2D != null:
-		$AnimatedSprite2D.play("default")
-	pass
-	
-func _process(delta: float) -> void:
-	shoot_bullet()
-	pass
-
-func _physics_process(delta: float) -> void:
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED 
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	position.x = clamp(position.x,20, 300)
-
-	move_and_slide()
-
-func take_damage(damage:int):
-	GameManager.health = GameManager.health - damage
-	
-	if(GameManager.health <= 0):
-		GameManager.GameOver.emit()
-		get_tree().paused = true
-	pass
-
-func shoot_bullet():
-	if Input.is_action_just_pressed("Fire_Bullet") && can_attack:
-		var bullets = bullet.instantiate()
-		bullets.position = Vector2($"FirePoint".global_position.x,$"FirePoint".global_position.y )
-		get_tree().root.add_child(bullets);
-		can_attack = false
-		$"AttackTimer".start()
-	pass
-
-
-func _on_attack_cooldown_timeout() -> void:
-	can_attack = true
-	pass # Replace with function body.
-
-
-
-```
 
 ### projectile
 
