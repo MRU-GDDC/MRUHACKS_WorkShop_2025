@@ -1,18 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://cty800vixtw86"]
 
-[ext_resource type="Script" uid="uid://3h2argymey3" path="res://Templates/scripts/ConclusionUi.gd" id="1_ri2aw"]
+[ext_resource type="Script" uid="uid://3h2argymey3" path="res://Templates/scripts/ConclusionUi.gd" id="1_rb6mv"]
 
 [node name="SendScreen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 320.0
-offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_ri2aw")
+script = ExtResource("1_rb6mv")
 
 [node name="Winning" type="Panel" parent="."]
 visible = false

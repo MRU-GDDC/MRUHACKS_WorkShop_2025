@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://iacx0o04fr3e"]
 
 [ext_resource type="Script" uid="uid://bv2k83m6exhjn" path="res://Templates/scripts/Enemy_Projectile.gd" id="1_k447w"]
-[ext_resource type="Texture2D" uid="uid://cplwik3xb3fx" path="res://Assets/bullet.png" id="2_2sjpo"]
+[ext_resource type="Texture2D" uid="uid://cplwik3xb3fx" path="res://Assets/projectile.png" id="2_2sjpo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1sfj"]
 size = Vector2(8.03982, 36)
