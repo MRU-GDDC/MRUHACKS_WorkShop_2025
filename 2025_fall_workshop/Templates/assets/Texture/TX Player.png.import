@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kc5e01gxygb"
-path="res://.godot/imported/icon.svg-2036461805055722014ed6e237507aa5.ctex"
+uid="uid://cbgwwwgaoifnh"
+path="res://.godot/imported/TX Player.png-29587bb7cebf3bb81ee0b2fbf29efd77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://premade assets/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-2036461805055722014ed6e237507aa5.ctex"]
+source_file="res://Templates/assets/Texture/TX Player.png"
+dest_files=["res://.godot/imported/TX Player.png-29587bb7cebf3bb81ee0b2fbf29efd77.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

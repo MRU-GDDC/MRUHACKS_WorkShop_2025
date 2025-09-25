@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://db3y4r8kmw03u"]
 
-[ext_resource type="Texture2D" uid="uid://dya0cg6fptm0j" path="res://premade assets/assets/Texture/TX Tileset Stone Ground.png" id="1_pfyj4"]
-[ext_resource type="Script" uid="uid://frueukukd4vj" path="res://premade assets/scripts/backgrond.gd" id="1_smg6n"]
-[ext_resource type="Texture2D" uid="uid://rmiv61is2vbf" path="res://premade assets/assets/Texture/TX Tileset Wall.png" id="2_smg6n"]
+[ext_resource type="Texture2D" uid="uid://dya0cg6fptm0j" path="res://Templates/assets/Texture/TX Tileset Stone Ground.png" id="1_pfyj4"]
+[ext_resource type="Script" uid="uid://frueukukd4vj" path="res://Templates/scripts/backgrond.gd" id="1_smg6n"]
+[ext_resource type="Texture2D" uid="uid://rmiv61is2vbf" path="res://Templates/assets/Texture/TX Tileset Wall.png" id="2_smg6n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rarhs"]
 texture = ExtResource("1_pfyj4")

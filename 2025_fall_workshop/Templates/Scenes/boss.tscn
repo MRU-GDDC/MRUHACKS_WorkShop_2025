@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://burrs72sx06ap"]
 
-[ext_resource type="Script" uid="uid://bx0t3rreqviim" path="res://premade assets/scripts/Boss.gd" id="1_neq0i"]
-[ext_resource type="Texture2D" uid="uid://y6hhdi7p111a" path="res://premade assets/assets/Vampires3_Run_front-Sheet.png" id="2_bl3e1"]
+[ext_resource type="Script" uid="uid://bx0t3rreqviim" path="res://Templates/scripts/Boss.gd" id="1_neq0i"]
+[ext_resource type="Texture2D" uid="uid://y6hhdi7p111a" path="res://Templates/assets/Vampires3_Run_front-Sheet.png" id="2_bl3e1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srgco"]
 atlas = ExtResource("2_bl3e1")

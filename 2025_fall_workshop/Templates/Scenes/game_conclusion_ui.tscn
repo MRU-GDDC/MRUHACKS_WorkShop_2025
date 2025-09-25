@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cty800vixtw86"]
 
-[ext_resource type="Script" uid="uid://3h2argymey3" path="res://premade assets/scripts/ConclusionUi.gd" id="1_ri2aw"]
+[ext_resource type="Script" uid="uid://3h2argymey3" path="res://Templates/scripts/ConclusionUi.gd" id="1_ri2aw"]
 
 [node name="SendScreen" type="Control"]
 layout_mode = 3

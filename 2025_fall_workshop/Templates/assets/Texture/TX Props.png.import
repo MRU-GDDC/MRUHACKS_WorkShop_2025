@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coowopn6kv8yw"
-path="res://.godot/imported/TX Props.png-2b3c932c61e9ef628de9050e14759a06.ctex"
+path="res://.godot/imported/TX Props.png-8867eec437820ea4674ed6dea2ca683a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://premade assets/assets/Texture/TX Props.png"
-dest_files=["res://.godot/imported/TX Props.png-2b3c932c61e9ef628de9050e14759a06.ctex"]
+source_file="res://Templates/assets/Texture/TX Props.png"
+dest_files=["res://.godot/imported/TX Props.png-8867eec437820ea4674ed6dea2ca683a.ctex"]
 
 [params]
 

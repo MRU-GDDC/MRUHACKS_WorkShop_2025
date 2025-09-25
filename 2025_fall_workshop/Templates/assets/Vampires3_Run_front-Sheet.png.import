@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dya0cg6fptm0j"
-path="res://.godot/imported/TX Tileset Stone Ground.png-287fb6148ca5b6afee1342b7ce4637da.ctex"
+uid="uid://y6hhdi7p111a"
+path="res://.godot/imported/Vampires3_Run_front-Sheet.png-7381e70a1adfd9e8bb935fd538498dc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://premade assets/assets/Texture/TX Tileset Stone Ground.png"
-dest_files=["res://.godot/imported/TX Tileset Stone Ground.png-287fb6148ca5b6afee1342b7ce4637da.ctex"]
+source_file="res://Templates/assets/Vampires3_Run_front-Sheet.png"
+dest_files=["res://.godot/imported/Vampires3_Run_front-Sheet.png-7381e70a1adfd9e8bb935fd538498dc3.ctex"]
 
 [params]
 
