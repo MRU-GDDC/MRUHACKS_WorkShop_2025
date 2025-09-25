@@ -2,28 +2,19 @@
 
 [ext_resource type="Script" uid="uid://3h2argymey3" path="res://Templates/scripts/ConclusionUi.gd" id="1_rb6mv"]
 
-[node name="SendScreen" type="Control"]
+[node name="GameEndUi" type="Control"]
 process_mode = 3
+custom_minimum_size = Vector2(320, 240)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 240.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
 script = ExtResource("1_rb6mv")
 
-[node name="Winning" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 0.0146618
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Winning"]
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(320, 240)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,12 +22,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="name" type="Label" parent="Winning/VBoxContainer"]
+[node name="Winning" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/Winning"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name" type="Label" parent="PanelContainer/Winning/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Game Won"
 
-[node name="score" type="Label" parent="Winning/VBoxContainer"]
+[node name="score" type="Label" parent="PanelContainer/Winning/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Score
@@ -44,21 +48,16 @@ text = "Score
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Try again" type="Button" parent="Winning/VBoxContainer"]
+[node name="Try again" type="Button" parent="PanelContainer/Winning/VBoxContainer"]
 layout_mode = 2
 text = "Play Again"
 
-[node name="Lost" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 0.0146618
+[node name="Lost" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Lost"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/Lost"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,14 +65,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Lost/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/Lost/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "You Lost"
 
-[node name="Button" type="Button" parent="Lost/VBoxContainer"]
+[node name="Button" type="Button" parent="PanelContainer/Lost/VBoxContainer"]
 layout_mode = 2
 text = "Play Again"
 
-[connection signal="pressed" from="Winning/VBoxContainer/Try again" to="." method="_on_try_again_pressed"]
-[connection signal="pressed" from="Lost/VBoxContainer/Button" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="PanelContainer/Winning/VBoxContainer/Try again" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="PanelContainer/Lost/VBoxContainer/Button" to="." method="_on_try_again_pressed"]

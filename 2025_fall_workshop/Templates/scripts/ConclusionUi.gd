@@ -5,15 +5,27 @@ extends Node
 func _ready() -> void:
 	GameManager.GameWon.connect(player_won)
 	GameManager.GameOver.connect(player_lost)
+	$".".visible = false
+	$PanelContainer/Lost.visible = false;
+	$PanelContainer/Winning.visible = false
 
 	pass # Replace with function body.
 
 func player_won():
-	$Winning.visible = true
-	$Winning/VBoxContainer/score.text = str("score: ",GameManager.score)
+	get_tree().paused = true
+
+	$".".visible = true
+
+	$PanelContainer/Winning.visible = true
+	$PanelContainer/Lost.visible = false;
+	$PanelContainer/Winning/VBoxContainer/score.text = str("score: ",GameManager.score)
 
 func player_lost():
-	$Lost.visible = true;
+	get_tree().paused = true
+	$".".visible = true
+	$PanelContainer/Lost.visible = true;
+	$PanelContainer/Winning.visible = false
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

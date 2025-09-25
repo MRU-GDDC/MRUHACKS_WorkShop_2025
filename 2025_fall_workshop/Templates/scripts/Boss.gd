@@ -14,7 +14,8 @@ func _ready() -> void:
 func take_damage(damage: int):
 	health = health  - damage
 	if health <= 0:
-		#GameManager.GameWon.emit()
+		GameManager.GameWon.emit()
+		GameManager.game_end = true;
 		queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
