@@ -56,10 +56,10 @@ func take_damage(damage:int):
 func shoot_bullet():
 	if Input.is_action_just_pressed("FireProjectile") && can_attack:
 		var bullets = bullet.instantiate()
-		bullets.position = Vector2($"FirePoint".global_position.x,$"FirePoint".global_position.y )
+		bullets.position = Vector2($"Marker2D".global_position.x,$"Marker2D".global_position.y )
 		get_tree().root.add_child(bullets);
 		can_attack = false
-		$"AttackTimer".start()
+		$"Timer".start()
 	pass
 
 
@@ -68,6 +68,31 @@ func _on_attack_cooldown_timeout() -> void:
 	pass # Replace with function body.
 
 
+
+```
+### projectile
+
+``` python
+
+extends Area2D
+
+@export var damage: int = 5
+@export var speed: int
+
+
+func _process(delta: float) -> void:
+	position.y -= speed * delta
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.has_method("take_damage"):
+		area.take_damage(damage)
+		queue_free()
+
+
+func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
+	queue_free()
+	pass # Replace with function body.
 
 ```
 
@@ -131,28 +156,4 @@ func _on_try_again_pressed() -> void:
 ```
 
 
-### projectile
 
-``` python
-
-extends Area2D
-
-@export var damage: int = 5
-@export var speed: int
-
-
-func _process(delta: float) -> void:
-	position.y -= speed * delta
-
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.has_method("take_damage"):
-		area.take_damage(damage)
-		queue_free()
-
-
-func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
-	queue_free()
-	pass # Replace with function body.
-
-```
